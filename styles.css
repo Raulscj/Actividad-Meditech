@@ -283,6 +283,7 @@ li a:hover {
 	text-align: center;
 	margin-bottom: 3.5rem;
 	transition: 0.4s;
+    border-radius: 4px;
 }
 
 .planes-salud .planes-boton:hover {
