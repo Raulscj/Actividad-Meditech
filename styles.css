@@ -1,128 +1,129 @@
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    font-family: sans-serif;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: sans-serif;
+	box-sizing: border-box;
 }
 
 .container {
-    display: grid;
+	display: grid;
 	width: 100%;
-    min-width: 360px;
+	min-width: 360px;
 	max-width: 100%;
-    background-color: white;
+	background-color: white;
 	grid-gap: 0px;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(4, auto);
-	grid-template-areas: 
-    'header header'
-    'servicios servicios'
-    'planes planes'
-    'info info'
-    'provedores provedores';
+	grid-template-rows: repeat(6, auto);
+	grid-template-areas:
+		'header header'
+		'servicios servicios'
+		'planes planes'
+		'info info'
+		'provedores provedores'
+        'footer footer';
 }
 
 /*header*/
 
 header {
-    grid-area: header;
-    background-image: url('img/banner.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 40rem;
-    display: flex;
-    flex-direction: column;
+	grid-area: header;
+	background-image: url('img/banner.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 40rem;
+	display: flex;
+	flex-direction: column;
 }
 
 nav {
-    height: 100px;
-    width: 100%;
-    padding: 0 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	height: 100px;
+	width: 100%;
+	padding: 0 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .logo {
-    height: 75px;
+	height: 75px;
 }
 
 .redes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .redes a {
-    padding: 0px 5px;
+	padding: 0px 5px;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 nav ul li {
-    margin: 0 5px;
+	margin: 0 5px;
 }
 
 nav ul li a {
-    color: blue;
-    font-size: 16px;
-    padding: 7px 5px;
+	color: blue;
+	font-size: 16px;
+	padding: 7px 5px;
 }
 
-li a:hover{
-    color: rgb(54, 99, 248);
-    transition: 0.5s;
+li a:hover {
+	color: rgb(54, 99, 248);
+	transition: 0.5s;
 }
 
 .check-btn {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    display: none;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+	display: none;
 }
 
 #check {
-    display: none;
+	display: none;
 }
 
 .banner {
-    margin-top: 8rem;
-    margin-left: 4.5rem;
-    width: 50%;
-    text-align: center;
-    height: 15rem;
-} 
+	margin-top: 8rem;
+	margin-left: 4.5rem;
+	width: 50%;
+	text-align: center;
+	height: 15rem;
+}
 
 .banner h1 {
-    font-size: 47px;
+	font-size: 47px;
 }
 .banner h2 {
-    font-size: 32px;
-    color: rgb(95, 93, 93);
+	font-size: 32px;
+	color: rgb(95, 93, 93);
 }
 .banner h3 {
-    margin-top: 8px;
-    font-size: 20px;
-    color: rgb(24, 147, 248);
-    margin-bottom: 3rem;
+	margin-top: 8px;
+	font-size: 20px;
+	color: rgb(24, 147, 248);
+	margin-bottom: 3rem;
 }
 .banner a {
-    font-size: 18px;
-    border: 2px solid rgb(24, 147, 248);
-    padding: 18px 34px;
-    border-radius: 2px;
-    color: rgb(24, 147, 248);
-    transition: 0.4s;
-} 
+	font-size: 18px;
+	border: 2px solid rgb(24, 147, 248);
+	padding: 18px 34px;
+	border-radius: 2px;
+	color: rgb(24, 147, 248);
+	transition: 0.4s;
+}
 
 .banner a:hover {
-    background-color: rgb(24, 147, 248);
-    color: white;
+	background-color: rgb(24, 147, 248);
+	color: white;
 }
 
 /*Fin del Header*/
@@ -130,95 +131,95 @@ li a:hover{
 /*Inicio de Sección Servicios*/
 
 .servicios {
-    display: flex;
-    flex-direction: column;
-    grid-area: servicios;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	grid-area: servicios;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .servicios h2 {
-    font-size: 35px;
+	font-size: 35px;
 }
 
 .slider-automatico {
-    margin-bottom: 6rem;
+	margin-bottom: 6rem;
 }
 
 .texto {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    width: 80%;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	width: 80%;
 }
 
 .texto .img-sec1 {
-    width: 38%;
+	width: 38%;
 }
 
 .texto .img-sec1 img {
-    width: 100%;
+	width: 100%;
 }
 
 .texto .texto-sec1 {
-    width: 58%;
-    font-size: 16px;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	width: 58%;
+	font-size: 16px;
+	text-align: justify;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .texto .texto-sec1 p {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .texto .texto-sec1 ul li {
-    padding: 12px 0;
+	padding: 12px 0;
 }
 
 .texto-sec1 .borde-li {
-    border-bottom: 2px solid rgba(128, 128, 128, 0.473);
+	border-bottom: 2px solid rgba(128, 128, 128, 0.473);
 }
 
 .texto .texto-sec1 ul li i {
-    color: blue;
+	color: blue;
 }
 
 .datos-moviles {
-    background-color: rgb(11, 165, 236);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 25px;
+	background-color: rgb(11, 165, 236);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	padding: 25px;
 }
 
 .datos-moviles ul {
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-    flex-wrap: wrap;
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+	flex-wrap: wrap;
 }
 
 .datos-moviles li {
-    margin: 2rem 1rem;
-    width: 13rem;
+	margin: 2rem 1rem;
+	width: 13rem;
 }
 
 .datos-moviles ul li i {
-    font-size: 32px;
-    margin-bottom: 0.4rem;
+	font-size: 32px;
+	margin-bottom: 0.4rem;
 }
 
-.datos-moviles ul li h3{
-    font-size: 30px;
-    margin-bottom: 0.4rem;
+.datos-moviles ul li h3 {
+	font-size: 30px;
+	margin-bottom: 0.4rem;
 }
 
 /*Fin de Servicios*/
@@ -226,66 +227,66 @@ li a:hover{
 /*Inicio de Sección planes de salud*/
 
 .planes-salud {
-    margin-top: 4rem;
-    grid-area: planes;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	margin-top: 4rem;
+	grid-area: planes;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-.planes-salud h2{
-    font-size: 35px;
-    color: rgb(0, 89, 255);
-    margin-bottom: 1rem;
+.planes-salud h2 {
+	font-size: 35px;
+	color: rgb(0, 89, 255);
+	margin-bottom: 1rem;
 }
 
 .planes-salud p {
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    width: 70%;
-    margin-bottom: 4rem;
+	color: black;
+	font-size: 20px;
+	text-align: center;
+	width: 70%;
+	margin-bottom: 4rem;
 }
 
 .planes-salud .planes {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 90%;
-    margin-bottom: 3rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	width: 90%;
+	margin-bottom: 3rem;
 }
 
 .planes-salud .planes a {
-    width: 25%;
-    padding: 17px;
-    border-radius: 4px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 2px 10px #888888;
-    transition: 0.4s;
+	width: 25%;
+	padding: 17px;
+	border-radius: 4px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 2px 10px #888888;
+	transition: 0.4s;
 }
 
 .planes-salud .planes a:hover {
-   width: 28%;
+	width: 28%;
 }
 
 .planes-salud .planes a img {
-    width: 100%;
+	width: 100%;
 }
 
 .planes-salud .planes-boton {
-    font-size: 20px;
-    color: white;
-    background-color: rgb(0, 89, 255);
-    padding: 10px 0;
-    width: 50%;
-    text-align: center;
-    margin-bottom: 3.5rem;
-    transition: 0.4s;
+	font-size: 20px;
+	color: white;
+	background-color: rgb(0, 89, 255);
+	padding: 10px 0;
+	width: 50%;
+	text-align: center;
+	margin-bottom: 3.5rem;
+	transition: 0.4s;
 }
 
 .planes-salud .planes-boton:hover {
-    background-color: blue;
+	background-color: blue;
 }
 
 /*Fin planes de salud*/
@@ -293,113 +294,235 @@ li a:hover{
 /*Inicio de Informacion*/
 
 .informacion {
-    grid-area: info;
-    width: 100%;
-    background-color: rgb(0, 183, 255);
-    display: flex;
-    flex-direction: row;
-    padding: 60px;
+	grid-area: info;
+	width: 100%;
+	background-color: rgb(0, 183, 255);
+	display: flex;
+	flex-direction: row;
+	padding: 60px;
 }
 
-.barra1, .barra2, .barra3, .barra4, .barra5, .barra6, .barra7 {
-    display: flex;
-    justify-content: space-between;
-    transition: 0.5s;
+.barra1,
+.barra2,
+.barra3,
+.barra4,
+.barra5,
+.barra6,
+.barra7 {
+	display: flex;
+	justify-content: space-between;
+	transition: 0.5s;
 }
 
 .texto-info {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    color: white;
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	color: white;
 }
 
 .texto-info li {
-    padding: 8px 0;
-    transition: 0.5s;
-    cursor: pointer;
+	padding: 8px 0;
+	transition: 0.5s;
+	cursor: pointer;
 }
 
-.barra1:hover, .barra2:hover, .barra3:hover, .barra4:hover, .barra5:hover, .barra6:hover, .barra7:hover {
-    color: blue;
+.barra1:hover,
+.barra2:hover,
+.barra3:hover,
+.barra4:hover,
+.barra5:hover,
+.barra6:hover,
+.barra7:hover {
+	color: blue;
 }
 
 .texto-info li p {
-    margin-top: 1rem;
-    display: none;
+	margin-top: 1rem;
+	display: none;
 }
 
 .texto-info h2 {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 1rem;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 .texto-info p {
-    font-size: 18px;
-    margin-bottom: 1rem;
+	font-size: 18px;
+	margin-bottom: 1rem;
 }
 
 .texto-info .borde-li2 {
-    border-top: 2px solid white;
+	border-top: 2px solid white;
 }
 
 .img-info {
-    width: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 4rem;
-    align-self: flex-start;
+	width: 45%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 4rem;
+	align-self: flex-start;
 }
 
 .img-info img {
-    width: 80%;
+	width: 80%;
 }
 
 /*Fin de Informacion*/
 
 /*Inicio de Provedor*/
 
+.provedor {
+	margin-top: 6rem;
+	grid-area: provedores;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+.provedor h2 {
+	font-size: 28px;
+	color: rgb(0, 102, 255);
+	margin-bottom: 2rem;
+}
 
+.provedor p {
+	font-size: 15px;
+	margin-bottom: 2.5rem;
+}
 
+.provedor-container {
+	width: 85%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+    margin-bottom: 3rem;
+}
 
+.imagen-boton {
+	width: 65%;
+}
 
+.imagen-boton .imagen-provedores {
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.imagen-provedores img {
+	width: 100%;
+}
+
+.lista-provedor {
+	width: 30%;
+	background-color: rgba(0, 0, 0, 0.089);
+	padding: 30px 30px;
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+	text-align: left;
+}
+
+.separador-p {
+    border-top: 2px dashed rgba(128, 128, 128, 0.288);
+}
+
+.lista-provedor .h-d {
+	display: flex;
+	margin-bottom: 1rem;
+}
+
+.h-d h4 {
+	margin-left: 1rem;
+}
+
+.lista-provedor p {
+	margin-left: 2rem;
+	margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.589);
+}
+
+.lista-provedor ul li {
+	padding: 1.5rem 0;
+}
+
+.boton-provedores {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.provedor-buton {
+	width: 88%;
+	background-color: rgb(0, 110, 255);
+	padding: 0.9rem 0;
+	text-align: center;
+	color: white;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.provedor-buton:hover {
+    background-color: rgb(81, 153, 247);
+}
+
+/*Fin de Provedor*/
+
+/*Inicio de Footer*/
+
+.footer {
+    background-color: rgb(0, 110, 255);
+    grid-area: footer;
+    padding: 1.5rem 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 13px;
+}
+
+.contacts a{
+    color: white;
+    margin-left: 1rem;
+}
+
+/*Fin de Footer*/
 
 /*Responsive Nav Bar*/
 
- @media (max-width: 858px) {
-    .check-btn {
-        display: flex;
-        color: blue;
-    }
-    nav {
-        padding: 0 30px;
-    }
-    nav ul {
-        position: absolute;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background-color: rgb(97, 244, 255);
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all 0.5s;
-        flex-direction: column;
-        z-index: 10;
-    }
-    nav ul li {
-        margin: 20px 0;
-    }
-    nav ul li a {
-        font-size: 20px;
-    }
-    nav li a:hover {
-        color: rgb(72, 168, 212);
-    }
-    #check:checked ~ ul {
-        left: 0;
-    }
-} 
+@media (max-width: 858px) {
+	.check-btn {
+		display: flex;
+		color: blue;
+	}
+	nav {
+		padding: 0 30px;
+	}
+	nav ul {
+		position: absolute;
+		width: 100%;
+		height: calc(100vh - 80px);
+		background-color: rgb(97, 244, 255);
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all 0.5s;
+		flex-direction: column;
+		z-index: 10;
+	}
+	nav ul li {
+		margin: 20px 0;
+	}
+	nav ul li a {
+		font-size: 20px;
+	}
+	nav li a:hover {
+		color: rgb(72, 168, 212);
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
+}
