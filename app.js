@@ -5,7 +5,7 @@ window.addEventListener('scroll', function () {
 });
 
 //Item a observar
-
+const imagen_info = document.getElementById('imagen-info')
 const imagen_link1 = document.getElementById('item-hide1');
 const imagen_link2 = document.getElementById('item-hide2');
 const imagen_link3 = document.getElementById('item-hide3');
@@ -19,8 +19,11 @@ const datos4 = document.getElementById('observar_li4')
 const cargaritem = (entradas, observador) => {
 	entradas.forEach((entrada) => {
 		if (entrada.isIntersecting) {
+
+			//efectos de entrada
 			entrada.target.classList.add('visible');
 
+			//codigo de contadores y animacion
 			let contador1 = document.getElementById('contador1');
 			let contador2 = document.getElementById('contador2');
 			let contador3 = document.getElementById('contador3');
@@ -72,6 +75,7 @@ const observador = new IntersectionObserver(cargaritem, {
 	threshold: 1,
 });
 
+observador.observe(imagen_info)
 observador.observe(imagen_link1);
 observador.observe(imagen_link2);
 observador.observe(imagen_link3);

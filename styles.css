@@ -77,6 +77,7 @@ nav {
 	top: 0;
 	left: 0;
 	transition: 0.5s;
+	z-index: 100;
 }
 
 nav.sticky {
@@ -231,22 +232,39 @@ li a:hover {
 }
 
 .slider-automatico {
-	background-color: aqua;
 	margin-top: 4rem;
 	margin-bottom: 4rem;
 	overflow: hidden;
+	width: 90%;
 }
+
 
 .slider-automatico ul {
 	display: flex;
-	width: 700%;
-	animation: cambio 10s infinite;
+	width: 189%;
+	animation: cambio 8s infinite alternate;
+}
+
+.slider-automatico i {
+	font-size: 40px;
+	margin-bottom: 2rem;
+	color: rgba(0, 0, 0, 0.507);
+}
+
+.slider-automatico h3 {
+	color: rgba(0, 0, 0, 0.589);
+	font-size: 16px;
 }
 
 .slider-automatico ul li {
-	background-color: blue;
-	border: 2px solid white;
-	width: 100%;
+	background-color: rgb(255, 248, 255);
+	border-radius: 40px;
+	padding: 20px 0;
+	width: 47.25%;
+	margin: 2% 2%;
+	display: flex;
+	align-items: center;
+	box-shadow: 0px 2px 10px #888888;
 }
 
 .slider-automatico ul li a {
@@ -257,38 +275,26 @@ li a:hover {
 	0% {
 		 margin-left: 0;
 	}
-	15% {
-		margin-left: -100%;
+	25% {
+		margin-left: -27%;
 	}
-	15% {
-		margin-left: -100%;
+	25% {
+		margin-left: -27%;
 	}
-	30% {
-		margin-left: -200%;
+	50% {
+		margin-left: -54%;
 	}
-	30% {
-		margin-left: -200%;
+	50% {
+		margin-left: -54%;
 	}
-	45% {
-		margin-left: -300%;
-	}
-	45% {
-		margin-left: -300%;
-	}
-	60% {
-		margin-left: -400%;
-	} 
-	60% {
-		margin-left: -400%;
-	} 
 	75% {
-		margin-left: -500%;
-	} 
+		margin-left: -81%;
+	}
 	75% {
-		margin-left: -500%;
-	} 
+		margin-left: -81%;
+	}
 	100% {
-		margin-left: -600%;
+		margin-left: -108%;
 	} 
 }
 
@@ -309,7 +315,7 @@ li a:hover {
 }
 
 .texto .texto-sec1 {
-	width: 58%;
+	width: 48%;
 	font-size: 16px;
 	text-align: justify;
 	display: flex;
@@ -357,8 +363,9 @@ li a:hover {
 	flex-direction: column;
 	margin: 2rem 1rem;
 	width: 13rem;
-	transition: .5s ease-in-out;
+	transition: .8s ease-in-out;
 	opacity: 0;
+	transform: translateY(-4rem);
 }
 
 .datos-moviles ul li i {
@@ -373,6 +380,7 @@ li a:hover {
 
 .datos-moviles li.visible {
 	opacity: 1;
+	transform: translateY(0rem);
 }
 
 /*Fin de Servicios*/
@@ -416,8 +424,9 @@ li a:hover {
 	border-radius: 4px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 2px 10px #888888;
-	transition: .5s ease-in-out;
+	transition: .8s ease-in-out;
 	opacity: 0;
+	transform: translateY(-4rem);
 }
 
 .planes-salud .planes a:hover {
@@ -426,6 +435,7 @@ li a:hover {
 
 .planes-salud .planes .visible {
 	opacity: 1;
+	transform: translateY(0);
 }
 
 .planes-salud .planes a img {
@@ -471,6 +481,17 @@ li a:hover {
 	display: flex;
 	justify-content: space-between;
 	transition: 0.5s;
+}
+
+#imagen-info {
+	opacity: 0;
+	transform: translateX(-4rem);
+	transition: 0.8s ease-in-out;
+}
+
+#imagen-info.visible {
+	opacity: 1;
+	transform: translateX(0rem);
 }
 
 .texto-info {
