@@ -223,6 +223,7 @@ li a:hover {
 	text-align: center;
 	justify-content: center;
 	align-items: center;
+	margin-top: 4rem;
 }
 
 .servicios h2 {
@@ -230,7 +231,65 @@ li a:hover {
 }
 
 .slider-automatico {
-	margin-bottom: 6rem;
+	background-color: aqua;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	overflow: hidden;
+}
+
+.slider-automatico ul {
+	display: flex;
+	width: 700%;
+	animation: cambio 10s infinite;
+}
+
+.slider-automatico ul li {
+	background-color: blue;
+	border: 2px solid white;
+	width: 100%;
+}
+
+.slider-automatico ul li a {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {
+		 margin-left: 0;
+	}
+	15% {
+		margin-left: -100%;
+	}
+	15% {
+		margin-left: -100%;
+	}
+	30% {
+		margin-left: -200%;
+	}
+	30% {
+		margin-left: -200%;
+	}
+	45% {
+		margin-left: -300%;
+	}
+	45% {
+		margin-left: -300%;
+	}
+	60% {
+		margin-left: -400%;
+	} 
+	60% {
+		margin-left: -400%;
+	} 
+	75% {
+		margin-left: -500%;
+	} 
+	75% {
+		margin-left: -500%;
+	} 
+	100% {
+		margin-left: -600%;
+	} 
 }
 
 .texto {
