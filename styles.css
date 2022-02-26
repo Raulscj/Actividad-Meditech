@@ -37,6 +37,7 @@ svg {
 	cursor: pointer;
 }
 
+
 @keyframes movimiento {
 	from {
 		transform: translateY(0px);
@@ -49,12 +50,20 @@ svg {
 
 header {
 	grid-area: header;
-	background-image: url('img/banner.jpg');
 	background-size: cover;
 	background-position: center;
 	height: 42rem;
 	display: flex;
 	flex-direction: column;
+	background-image: url('img/banner.jpg');
+}
+
+.back-1 {
+	background-image: url('img/banner.jpg');
+}
+
+.back-2 {
+	background-image: url('img/banner2.jpg');
 }
 
 nav {
@@ -64,6 +73,19 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+
+nav.sticky {
+	background-color: rgb(7, 130, 212);
+	height: 80px;
+}
+
+nav.sticky a {
+	color: white;
 }
 
 .logo {
@@ -112,11 +134,51 @@ li a:hover {
 }
 
 .banner {
-	margin-top: 8rem;
-	margin-left: 4.5rem;
-	width: 50%;
+	margin-top: 14rem;
+	width: 100%;
 	text-align: center;
 	height: 15rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.slider-index {
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.slider-index i {
+	padding: 0 15px;
+	font-size: 20px;
+	transition: 0.4s;
+}
+
+#index1 {
+	color: blue;
+}
+
+#index2 {
+	color: gray;
+}
+
+.banner-content {
+	margin-right: 32rem;
+}
+
+.flecha1, .flecha2 {
+	background-color: rgba(128, 128, 128, 0.425);
+	padding: 80px 20px;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+.flecha1:hover, .flecha2:hover {
+	background-color: rgba(128, 128, 128, 0.671);
+}
+
+.flecha1 i, .flecha2 i {
+	font-size: 25px;
 }
 
 .banner h1 {
@@ -147,7 +209,7 @@ li a:hover {
 }
 
 .boton-animado {
-	margin-top: 2rem;
+	margin-top: 3rem;
 	text-align: center;
 }
 
@@ -524,6 +586,31 @@ li a:hover {
 
 /*Fin de Footer*/
 
+/*Icon*/
+.ws-icon {
+	position: fixed;
+	width: 55px;
+	height: 55px;
+	line-height: 55px;
+	bottom: 35px;
+	right: 30px;
+	background-color: rgb(7, 211, 7);
+	color: white;
+	border-radius: 100px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	transition: 0.5s;
+}
+
+.ws-icon:hover {
+	width: 60px;
+	height: 60px;
+}
+
+.ws-icon i {
+	font-size: 32px;
+}
 
 /*Responsive Nav Bar*/
 

@@ -1,3 +1,9 @@
+//nav
+window.addEventListener('scroll', function () {
+	var nav = document.querySelector('nav');
+	nav.classList.toggle('sticky', window.scrollY > 0);
+});
+
 //Item a observar
 
 const imagen_link1 = document.getElementById('item-hide1');
@@ -8,12 +14,12 @@ const imagen_link3 = document.getElementById('item-hide3');
 
 const cargaritem = (entradas, observador) => {
 	entradas.forEach((entrada) => {
-		if (entrada.isIntersecting ) {
-			entrada.target.classList.add('visible')
+		if (entrada.isIntersecting) {
+			entrada.target.classList.add('visible');
 		} else {
-			entrada.target.classList.remove('visible')
+			entrada.target.classList.remove('visible');
 		}
-	})
+	});
 };
 
 //observador
@@ -22,10 +28,9 @@ const observador = new IntersectionObserver(cargaritem, {
 	threshold: 0.5,
 });
 
-observador.observe(imagen_link1)
-observador.observe(imagen_link2)
-observador.observe(imagen_link3)
-
+observador.observe(imagen_link1);
+observador.observe(imagen_link2);
+observador.observe(imagen_link3);
 
 $(document).ready(function () {
 	//Drop Automatico
@@ -97,5 +102,48 @@ $(document).ready(function () {
 	$('svg').click(function () {
 		var x = document.getElementById('slider');
 		x.scrollIntoView({ behavior: 'smooth', block: 'center' });
+	});
+	//flechas
+	$('#flecha1').click(function () {
+		$('#titulo-h').fadeOut();
+		$('#sub-h').fadeOut();
+		$('#text-h').fadeOut();
+		$('#boton-h').fadeOut(20);
+		$('header').removeClass('back-2');
+		$('header').addClass('back-1');
+		$('#index1').css({ color: 'blue'});
+		$('#index2').css({ color: 'gray' });
+		setTimeout(change, 600);
+		function change() {
+			$('#titulo-h').html('CENTRO DE ATENCION');
+			$('#sub-h').html('Medica Primaria y Odontológica');
+			$('#text-h').html('"Siempre Pensando en su Salud"');
+			$('#boton-h').html('Contáctanos');
+			$('#titulo-h').fadeIn();
+			$('#sub-h').fadeIn();
+			$('#text-h').fadeIn();
+			$('#boton-h').fadeIn();
+		}
+	});
+	$('#flecha2').click(function () {
+		$('#titulo-h').fadeOut();
+		$('#sub-h').fadeOut();
+		$('#text-h').fadeOut();
+		$('#boton-h').fadeOut(20);
+		$('header').removeClass('back-1');
+		$('header').addClass('back-2');
+		$('#index1').css({ color: 'gray' });
+		$('#index2').css({ color: 'blue' });
+		setTimeout(change, 600);
+		function change() {
+			$('#titulo-h').html('CUENTA CON NOSOTROS');
+			$('#sub-h').html('Afiliate a Nuestros Servicios');
+			$('#text-h').html('"Piensa en tu Bienestar"');
+			$('#boton-h').html('Afiliarse');
+			$('#titulo-h').fadeIn();
+			$('#sub-h').fadeIn();
+			$('#text-h').fadeIn();
+			$('#boton-h').fadeIn();
+		}
 	});
 });
