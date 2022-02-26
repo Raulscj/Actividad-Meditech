@@ -82,6 +82,12 @@ nav {
 
 nav.sticky {
 	background-color: rgb(7, 130, 212);
+	height: 60px;
+}
+
+nav.sticky ul {
+	top: 60px;
+	height: calc(110vh - 90px);
 }
 
 nav.sticky a {
