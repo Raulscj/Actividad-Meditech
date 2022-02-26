@@ -9,6 +9,10 @@ window.addEventListener('scroll', function () {
 const imagen_link1 = document.getElementById('item-hide1');
 const imagen_link2 = document.getElementById('item-hide2');
 const imagen_link3 = document.getElementById('item-hide3');
+const datos1 = document.getElementById('observar_li1')
+const datos2 = document.getElementById('observar_li2')
+const datos3 = document.getElementById('observar_li3')
+const datos4 = document.getElementById('observar_li4')
 
 //funcion del item-hide
 
@@ -16,8 +20,49 @@ const cargaritem = (entradas, observador) => {
 	entradas.forEach((entrada) => {
 		if (entrada.isIntersecting) {
 			entrada.target.classList.add('visible');
-		} else {
-			entrada.target.classList.remove('visible');
+
+			let contador1 = document.getElementById('contador1');
+			let contador2 = document.getElementById('contador2');
+			let contador3 = document.getElementById('contador3');
+			let contador4 = document.getElementById('contador4');
+
+			let cant1 = 0,
+				cant2 = 0,
+				cant3 = 0,
+				cant4 = 0,
+				tiempo = 25;
+
+			let tiempo1 = setInterval(() => {
+				contador1.textContent = Math.ceil(cant1 += 120);
+				if (cant1 === 14227) {
+					clearInterval(tiempo1);
+				}
+				if (cant1 > 14227) {
+					contador1.textContent = 14227
+					clearInterval(tiempo1)
+				}
+			}, 2);
+
+			let tiempo2 = setInterval(() => {
+				contador2.textContent = cant2 += 388;
+				if (cant2 === 48500) {
+					clearInterval(tiempo2);
+				}
+			}, 1);
+
+			let tiempo3 = setInterval(() => {
+				contador3.textContent = cant3 += 1;
+				if (cant3 >= 50) {
+					clearInterval(tiempo3);
+				}
+			}, 30);
+
+			let tiempo4 = setInterval(() => {
+				contador4.textContent = cant4 += 1;
+				if (cant4 >= 100) {
+					clearInterval(tiempo4);
+				}
+			}, 14);
 		}
 	});
 };
@@ -25,12 +70,18 @@ const cargaritem = (entradas, observador) => {
 //observador
 
 const observador = new IntersectionObserver(cargaritem, {
-	threshold: 0.5,
+	threshold: 1,
 });
 
 observador.observe(imagen_link1);
 observador.observe(imagen_link2);
 observador.observe(imagen_link3);
+observador.observe(datos1)
+observador.observe(datos2)
+observador.observe(datos3)
+observador.observe(datos4)
+
+//animacion de numeros
 
 $(document).ready(function () {
 	//Drop Automatico
@@ -111,7 +162,7 @@ $(document).ready(function () {
 		$('#boton-h').fadeOut(20);
 		$('header').removeClass('back-2');
 		$('header').addClass('back-1');
-		$('#index1').css({ color: 'blue'});
+		$('#index1').css({ color: 'blue' });
 		$('#index2').css({ color: 'gray' });
 		setTimeout(change, 600);
 		function change() {
