@@ -27,12 +27,32 @@
 
 /*header*/
 
+/*Animación de Botón*/
+svg #grupo1 #esfera {
+	animation: movimiento 1.5s infinite;
+}
+
+svg {
+	width: 50px;
+	cursor: pointer;
+}
+
+@keyframes movimiento {
+	from {
+		transform: translateY(0px);
+	}
+	to {
+		transform: translateY(160px);
+		opacity: 0%;
+	}
+}
+
 header {
 	grid-area: header;
 	background-image: url('img/banner.jpg');
 	background-size: cover;
 	background-position: center;
-	height: 40rem;
+	height: 42rem;
 	display: flex;
 	flex-direction: column;
 }
@@ -124,6 +144,11 @@ li a:hover {
 .banner a:hover {
 	background-color: rgb(24, 147, 248);
 	color: white;
+}
+
+.boton-animado {
+	margin-top: 2rem;
+	text-align: center;
 }
 
 /*Fin del Header*/
@@ -263,11 +288,18 @@ li a:hover {
 	border-radius: 4px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 2px 10px #888888;
-	transition: 0.4s;
+	transition: .5s ease-in-out;
+	opacity: 0;
+	transform: scale(0.9);
 }
 
 .planes-salud .planes a:hover {
-	width: 28%;
+	width: 27%;
+}
+
+.planes-salud .planes .visible {
+	opacity: 1;
+	transform: scale(1);
 }
 
 .planes-salud .planes a img {
@@ -491,6 +523,7 @@ li a:hover {
 }
 
 /*Fin de Footer*/
+
 
 /*Responsive Nav Bar*/
 
