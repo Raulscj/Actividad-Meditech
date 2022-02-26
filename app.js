@@ -29,8 +29,7 @@ const cargaritem = (entradas, observador) => {
 			let cant1 = 0,
 				cant2 = 0,
 				cant3 = 0,
-				cant4 = 0,
-				tiempo = 25;
+				cant4 = 0 
 
 			let tiempo1 = setInterval(() => {
 				contador1.textContent = Math.ceil(cant1 += 120);
