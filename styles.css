@@ -50,20 +50,26 @@ svg {
 
 header {
 	grid-area: header;
-	background-size: cover;
-	background-position: center;
-	height: 38rem;
+	height: 51rem;
 	display: flex;
 	flex-direction: column;
 	background-image: url('img/banner.jpg');
+	background-size: cover;
+	background-position: center;
 }
 
 .back-1 {
 	background-image: url('img/banner.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
 }
 
 .back-2 {
 	background-image: url('img/banner2.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
 }
 
 nav {
@@ -80,19 +86,22 @@ nav {
 	z-index: 100;
 }
 
-nav.sticky {
+ nav.sticky {
 	background-color: rgb(7, 130, 212);
 	height: 60px;
 }
 
 nav.sticky ul {
 	top: 60px;
-	height: calc(110vh - 90px);
+}
+
+nav.sticky i {
+	color: white;
 }
 
 nav.sticky a {
 	color: white;
-}
+} 
 
 .logo {
 	height: 75px;
@@ -140,7 +149,7 @@ li a:hover {
 }
 
 .banner {
-	margin-top: 10rem;
+	margin-top: 15rem;
 	width: 100%;
 	text-align: center;
 	height: 15rem;
@@ -169,12 +178,13 @@ li a:hover {
 }
 
 .banner-content {
-	margin-right: 32rem;
+	width: 50%;
+	margin-right: 0;
 }
 
 .flecha1, .flecha2 {
 	background-color: rgba(128, 128, 128, 0.425);
-	padding: 80px 20px;
+	padding: 40px 10px;
 	border-radius: 5px;
 	transition: 0.5s;
 }
@@ -188,15 +198,15 @@ li a:hover {
 }
 
 .banner h1 {
-	font-size: 47px;
+	font-size: 30px;
 }
 .banner h2 {
-	font-size: 32px;
+	font-size: 25px;
 	color: rgb(95, 93, 93);
 }
 .banner h3 {
 	margin-top: 8px;
-	font-size: 20px;
+	font-size: 18px;
 	color: rgb(24, 147, 248);
 	margin-bottom: 3rem;
 }
@@ -215,7 +225,7 @@ li a:hover {
 }
 
 .boton-animado {
-	margin-top: 3rem;
+	margin-top: 8rem;
 	text-align: center;
 }
 
@@ -231,10 +241,18 @@ li a:hover {
 	justify-content: center;
 	align-items: center;
 	margin-top: 4rem;
+	width: 100%;
 }
 
 .servicios h2 {
-	font-size: 35px;
+	font-size: 25px;
+	color: rgb(0, 140, 255);
+}
+
+.servicios p {
+	width: 80%;
+	margin-top: 1rem;
+	font-size: 16px;
 }
 
 .slider-automatico {
@@ -248,7 +266,7 @@ li a:hover {
 .slider-automatico ul {
 	display: flex;
 	width: 189%;
-	animation: cambio 8s infinite alternate;
+	animation: cambio 10s infinite alternate;
 }
 
 .slider-automatico i {
@@ -259,13 +277,13 @@ li a:hover {
 
 .slider-automatico h3 {
 	color: rgba(0, 0, 0, 0.589);
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .slider-automatico ul li {
 	background-color: rgb(255, 248, 255);
 	border-radius: 40px;
-	padding: 20px 0;
+	padding: 20px 15px;
 	width: 47.25%;
 	margin: 2% 2%;
 	display: flex;
@@ -281,47 +299,52 @@ li a:hover {
 	0% {
 		 margin-left: 0;
 	}
-	25% {
-		margin-left: -27%;
+	20% {
+		margin-left: -40%;
 	}
-	25% {
-		margin-left: -27%;
+	20% {
+		margin-left: -40%;
 	}
-	50% {
-		margin-left: -54%;
+	40% {
+		margin-left: -40%;
 	}
-	50% {
-		margin-left: -54%;
+	40% {
+		margin-left: -80%;
 	}
-	75% {
-		margin-left: -81%;
+	60% {
+		margin-left: -80%;
 	}
-	75% {
-		margin-left: -81%;
+	60% {
+		margin-left: -120%;
+	}
+	80% {
+		margin-left: -160%;
+	} 
+	80% {
+		margin-left: -160%;
 	}
 	100% {
-		margin-left: -108%;
-	} 
+		margin-left: -180%;
+	}
 }
 
 .texto {
 	display: flex;
-	flex-direction: row;
-	width: 100%;
+	flex-direction: column;
 	justify-content: space-between;
 	width: 80%;
 }
 
 .texto .img-sec1 {
-	width: 38%;
-}
-
-.texto .img-sec1 img {
 	width: 100%;
 }
 
+.texto .img-sec1 img {
+	display: none;
+}
+
 .texto .texto-sec1 {
-	width: 48%;
+	width: 100%;
 	font-size: 16px;
 	text-align: justify;
 	display: flex;
@@ -331,6 +354,7 @@ li a:hover {
 
 .texto .texto-sec1 p {
 	margin-bottom: 30px;
+	width: 100%;
 }
 
 .texto .texto-sec1 ul li {
@@ -347,6 +371,7 @@ li a:hover {
 
 .datos-moviles {
 	background-color: rgb(11, 165, 236);
+	margin-top: 4rem;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -358,7 +383,7 @@ li a:hover {
 .datos-moviles ul {
 	display: flex;
 	width: 90%;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	margin-top: 1rem;
 	flex-wrap: wrap;
@@ -403,14 +428,14 @@ li a:hover {
 }
 
 .planes-salud h2 {
-	font-size: 35px;
+	font-size: 25px;
 	color: rgb(0, 89, 255);
 	margin-bottom: 1rem;
 }
 
 .planes-salud p {
 	color: black;
-	font-size: 20px;
+	font-size: 16px;
 	text-align: center;
 	width: 70%;
 	margin-bottom: 4rem;
@@ -418,25 +443,27 @@ li a:hover {
 
 .planes-salud .planes {
 	display: flex;
-	justify-content: space-around;
-	align-items: flex-start;
-	width: 90%;
+	justify-content: center;
+	align-items: center;
+	width: 95%;
 	margin-bottom: 3rem;
+	flex-direction: column;
 }
 
 .planes-salud .planes a {
-	width: 25%;
+	width: 50%;
 	padding: 17px;
 	border-radius: 4px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 2px 10px #888888;
 	transition: .8s ease-in-out;
 	opacity: 0;
+	margin: 1rem auto;
 	transform: translateY(-4rem);
 }
 
 .planes-salud .planes a:hover {
-	width: 27%;
+	width: 53%;
 }
 
 .planes-salud .planes .visible {
@@ -473,7 +500,7 @@ li a:hover {
 	width: 100%;
 	background-color: rgb(0, 183, 255);
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	padding: 60px;
 }
 
@@ -487,6 +514,7 @@ li a:hover {
 	display: flex;
 	justify-content: space-between;
 	transition: 0.5s;
+	font-size: 12px;
 }
 
 #imagen-info {
@@ -501,7 +529,7 @@ li a:hover {
 }
 
 .texto-info {
-	width: 45%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-self: center;
@@ -527,17 +555,20 @@ li a:hover {
 .texto-info li p {
 	margin-top: 1rem;
 	display: none;
+	text-align: justify;
 }
 
 .texto-info h2 {
-	font-size: 30px;
+	margin-top: 2rem;
+	font-size: 20px;
 	text-align: center;
 	margin-bottom: 1rem;
 }
 
 .texto-info p {
-	font-size: 18px;
+	font-size: 14px;
 	margin-bottom: 1rem;
+	text-align: center;
 }
 
 .texto-info .borde-li2 {
@@ -545,11 +576,11 @@ li a:hover {
 }
 
 .img-info {
-	width: 45%;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-right: 4rem;
+	margin-right: 2rem;
 	align-self: flex-start;
 }
 
@@ -562,39 +593,43 @@ li a:hover {
 /*Inicio de Provedor*/
 
 .provedor {
-	margin-top: 6rem;
+	margin-top: 3rem;
 	grid-area: provedores;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
+	text-align: center;
 }
 
 .provedor h2 {
-	font-size: 28px;
+	font-size: 22px;
 	color: rgb(0, 102, 255);
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 }
 
 .provedor p {
 	font-size: 15px;
-	margin-bottom: 2.5rem;
+	margin-bottom: 2rem;
+	width: 100%;
 }
 
 .provedor-container {
-	width: 85%;
+	width: 100%;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
     margin-bottom: 3rem;
 }
 
 .imagen-boton {
-	width: 65%;
+	width: 100%;
 }
 
 .imagen-boton .imagen-provedores {
 	width: 100%;
+	margin-top: 2rem;
 	margin-bottom: 2rem;
 }
 
@@ -603,36 +638,45 @@ li a:hover {
 }
 
 .lista-provedor {
-	width: 30%;
+	width: 100%;
 	background-color: rgba(0, 0, 0, 0.089);
-	padding: 30px 30px;
 	display: flex;
 	flex-direction: column;
-	font-size: 14px;
+	font-size: 10px;
 	text-align: left;
+	padding: 1.5rem 0;
+	align-items: center;
 }
 
 .separador-p {
-    border-top: 2px dashed rgba(128, 128, 128, 0.288);
+	border-left: 2px dashed rgba(128, 128, 128, 0.288);
+}
+
+.lista-provedor ul {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
 }
 
 .lista-provedor .h-d {
 	display: flex;
 	margin-bottom: 1rem;
+	font-size: 8px;
 }
 
-.h-d h4 {
-	margin-left: 1rem;
+.lista-provedor .h-d i{
+	margin-right: 3px;
 }
 
 .lista-provedor p {
-	margin-left: 2rem;
+	font-size: 6px;
 	margin-bottom: 10px;
     color: rgba(0, 0, 0, 0.589);
 }
 
 .lista-provedor ul li {
-	padding: 1.5rem 0;
+	padding: 0rem 1rem;
+	width: 22%;
 }
 
 .boton-provedores {
@@ -662,17 +706,18 @@ li a:hover {
 .footer {
     background-color: rgb(0, 110, 255);
     grid-area: footer;
-    padding: 1.5rem 6rem;
+    padding: 1.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
-    font-size: 13px;
+    font-size: 6px;
+	width: 100%;
 }
 
 .contacts a{
     color: white;
-    margin-left: 1rem;
+    margin-left: 0.2rem;
 }
 
 /*Fin de Footer*/

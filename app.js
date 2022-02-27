@@ -72,7 +72,7 @@ const cargaritem = (entradas, observador) => {
 //observador
 
 const observador = new IntersectionObserver(cargaritem, {
-	threshold: 1,
+	threshold: 0.5,
 });
 
 observador.observe(imagen_info)
