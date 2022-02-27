@@ -292,10 +292,6 @@ li a:hover {
 	box-shadow: 0px 2px 10px #888888;
 }
 
-.slider-automatico ul li a {
-	width: 100%;
-}
-
 @keyframes cambio {
 	0% {
 		margin-left: 0;
@@ -934,6 +930,9 @@ li a:hover {
 	.contacts a {
 		margin-left: 1rem;
 	}
+	.img-info img {
+		width: 70%;
+	}
 }
 
 /*Responsive Tablet Grande*/
@@ -1106,10 +1105,16 @@ li a:hover {
 	.contacts a {
 		margin-left: 1rem;
 	}
+	.img-info img {
+		width: 50%;
+	}
 }
 
 /*Responsive Laptop*/
 @media (min-width: 1280px) {
+	.img-info img {
+		width: 80%;
+	}
 	header {
 		height: 60rem;
 	}
