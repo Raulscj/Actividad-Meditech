@@ -22,7 +22,7 @@
 		'planes planes'
 		'info info'
 		'provedores provedores'
-        'footer footer';
+		'footer footer';
 }
 
 /*header*/
@@ -36,7 +36,6 @@ svg {
 	width: 50px;
 	cursor: pointer;
 }
-
 
 @keyframes movimiento {
 	from {
@@ -86,7 +85,7 @@ nav {
 	z-index: 100;
 }
 
- nav.sticky {
+nav.sticky {
 	background-color: rgb(7, 130, 212);
 	height: 60px;
 }
@@ -101,7 +100,7 @@ nav.sticky i {
 
 nav.sticky a {
 	color: white;
-} 
+}
 
 .logo {
 	height: 75px;
@@ -179,21 +178,23 @@ li a:hover {
 
 .banner-content {
 	width: 50%;
-	margin-right: 0;
 }
 
-.flecha1, .flecha2 {
+.flecha1,
+.flecha2 {
 	background-color: rgba(128, 128, 128, 0.425);
 	padding: 40px 10px;
 	border-radius: 5px;
 	transition: 0.5s;
 }
 
-.flecha1:hover, .flecha2:hover {
+.flecha1:hover,
+.flecha2:hover {
 	background-color: rgba(128, 128, 128, 0.671);
 }
 
-.flecha1 i, .flecha2 i {
+.flecha1 i,
+.flecha2 i {
 	font-size: 25px;
 }
 
@@ -262,7 +263,6 @@ li a:hover {
 	width: 90%;
 }
 
-
 .slider-automatico ul {
 	display: flex;
 	width: 189%;
@@ -297,7 +297,7 @@ li a:hover {
 
 @keyframes cambio {
 	0% {
-		 margin-left: 0;
+		margin-left: 0;
 	}
 	20% {
 		margin-left: -40%;
@@ -319,7 +319,7 @@ li a:hover {
 	}
 	80% {
 		margin-left: -160%;
-	} 
+	}
 	80% {
 		margin-left: -160%;
 	}
@@ -394,7 +394,7 @@ li a:hover {
 	flex-direction: column;
 	margin: 2rem 1rem;
 	width: 13rem;
-	transition: .8s ease-in-out;
+	transition: 0.8s ease-in-out;
 	opacity: 0;
 	transform: translateY(-4rem);
 }
@@ -456,7 +456,7 @@ li a:hover {
 	border-radius: 4px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 2px 10px #888888;
-	transition: .8s ease-in-out;
+	transition: 0.8s ease-in-out;
 	opacity: 0;
 	margin: 1rem auto;
 	transform: translateY(-4rem);
@@ -484,7 +484,7 @@ li a:hover {
 	text-align: center;
 	margin-bottom: 3.5rem;
 	transition: 0.4s;
-    border-radius: 4px;
+	border-radius: 4px;
 }
 
 .planes-salud .planes-boton:hover {
@@ -620,7 +620,7 @@ li a:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
 
 .imagen-boton {
@@ -664,14 +664,14 @@ li a:hover {
 	font-size: 8px;
 }
 
-.lista-provedor .h-d i{
+.lista-provedor .h-d i {
 	margin-right: 3px;
 }
 
 .lista-provedor p {
 	font-size: 6px;
 	margin-bottom: 10px;
-    color: rgba(0, 0, 0, 0.589);
+	color: rgba(0, 0, 0, 0.589);
 }
 
 .lista-provedor ul li {
@@ -691,12 +691,12 @@ li a:hover {
 	padding: 0.9rem 0;
 	text-align: center;
 	color: white;
-    border-radius: 3px;
-    transition: 0.5s;
+	border-radius: 3px;
+	transition: 0.5s;
 }
 
 .provedor-buton:hover {
-    background-color: rgb(81, 153, 247);
+	background-color: rgb(81, 153, 247);
 }
 
 /*Fin de Provedor*/
@@ -704,20 +704,20 @@ li a:hover {
 /*Inicio de Footer*/
 
 .footer {
-    background-color: rgb(0, 110, 255);
-    grid-area: footer;
-    padding: 1.5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    font-size: 6px;
+	background-color: rgb(0, 110, 255);
+	grid-area: footer;
+	padding: 1.5rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: white;
+	font-size: 6px;
 	width: 100%;
 }
 
-.contacts a{
-    color: white;
-    margin-left: 0.2rem;
+.contacts a {
+	color: white;
+	margin-left: 0.2rem;
 }
 
 /*Fin de Footer*/
@@ -749,8 +749,7 @@ li a:hover {
 }
 
 /*Responsive Nav Bar*/
-
-@media (max-width: 858px) {
+@media (max-width: 1024px) {
 	.check-btn {
 		display: flex;
 		color: blue;
@@ -781,5 +780,306 @@ li a:hover {
 	}
 	#check:checked ~ ul {
 		left: 0;
+	}
+}
+
+/*Ajuste de 428px*/
+@media (min-width: 427px) {
+	header {
+		height: 58rem;
+	}
+	@keyframes cambio {
+		0% {
+			margin-left: 0;
+		}
+		20% {
+			margin-left: -35%;
+		}
+		20% {
+			margin-left: -35%;
+		}
+		40% {
+			margin-left: -70%;
+		}
+		40% {
+			margin-left: -70%;
+		}
+		60% {
+			margin-left: -105%;
+		}
+		60% {
+			margin-left: -105%;
+		}
+		80% {
+			margin-left: -135%;
+		}
+		80% {
+			margin-left: -135%;
+		}
+		100% {
+			margin-left: -150%;
+		}
+	}
+}
+
+/*Ajuste de 550px*/
+@media (min-width: 550px) {
+	@keyframes cambio {
+		0% {
+			margin-left: 0;
+		}
+		25% {
+			margin-left: -29%;
+		}
+		25% {
+			margin-left: -29%;
+		}
+		50% {
+			margin-left: -58%;
+		}
+		50% {
+			margin-left: -58%;
+		}
+		75% {
+			margin-left: -92%;
+		}
+		75% {
+			margin-left: -92%;
+		}
+		100% {
+			margin-left: -108%;
+		}
+	}
+}
+
+/*Ajuste de 650px*/
+@media (min-width: 805px) {
+	header {
+		height: 68rem;
+	}
+	@keyframes cambio {
+		0% {
+			margin-left: 0;
+		}
+		25% {
+			margin-left: -25%;
+		}
+		25% {
+			margin-left: -25%;
+		}
+		50% {
+			margin-left: -50%;
+		}
+		50% {
+			margin-left: -50%;
+		}
+		75% {
+			margin-left: -75%;
+		}
+		75% {
+			margin-left: -75%;
+		}
+		100% {
+			margin-left: -90%;
+		}
+	}
+	.lista-provedor p {
+		font-size: 12px;
+	}
+	.banner {
+		margin-top: 25rem;
+	}
+	.flecha1,
+	.flecha2 {
+		padding: 80px 30px;
+	}
+
+	.flecha1 i,
+	.flecha2 i {
+		font-size: 35px;
+	}
+
+	.banner h1 {
+		font-size: 45px;
+	}
+	.banner h2 {
+		margin-top: 1.5rem;
+		font-size: 30px;
+	}
+	.banner h3 {
+		margin-top: 1rem;
+		font-size: 25px;
+	}
+	.banner a {
+		font-size: 30px;
+		border: 2px solid rgb(24, 147, 248);
+		padding: 18px 34px;
+	}
+	svg {
+		margin-top: 2rem;
+		width: 65px;
+	}
+}
+
+@media (min-width: 1024px) {
+	header {
+		height: 86rem;
+	}
+	@keyframes cambio {
+		0% {
+			margin-left: 0;
+		}
+		25% {
+			margin-left: -28%;
+		}
+		25% {
+			margin-left: -28%;
+		}
+		50% {
+			margin-left: -56%;
+		}
+		50% {
+			margin-left: -56%;
+		}
+		75% {
+			margin-left: -84%;
+		}
+		75% {
+			margin-left: -84%;
+		}
+		100% {
+			margin-left: -92%;
+		}
+	}
+	.lista-provedor p {
+		font-size: 14px;
+	}
+	.banner {
+		margin-top: 30rem;
+	}
+	.flecha1,
+	.flecha2 {
+		padding: 80px 30px;
+	}
+
+	.flecha1 i,
+	.flecha2 i {
+		font-size: 35px;
+	}
+
+	.banner h1 {
+		font-size: 65px;
+	}
+	.banner h2 {
+		margin-top: 1.5rem;
+		font-size: 50px;
+	}
+	.banner h3 {
+		margin-top: 1rem;
+		font-size: 35px;
+	}
+	.banner a {
+		font-size: 30px;
+		border: 2px solid rgb(24, 147, 248);
+		padding: 18px 34px;
+		margin-top: 2rem;
+	}
+	svg {
+		margin-top: 12rem;
+		width: 90px;
+	}
+	.barra1,
+	.barra2,
+	.barra3,
+	.barra4,
+	.barra5,
+	.barra6,
+	.barra7 {
+		font-size: 18px;
+	}
+
+	.texto-info li p {
+		font-size: 15px;
+	}
+
+	.texto-info h2 {
+		margin-top: 2rem;
+		font-size: 35px;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.texto-info p {
+		font-size: 20px;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	.texto-info .borde-li2 {
+		border-top: 2px solid white;
+	}
+
+	.img-info {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 2rem;
+		align-self: flex-start;
+	}
+	.lista-provedor {
+		width: 30%;
+		background-color: rgba(0, 0, 0, 0.089);
+		padding: 30px 30px;
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+
+	.lista-provedor ul li {
+		padding: 1.5rem 0;
+		width: 100%;
+	}
+
+	.lista-provedor ul li h4 {
+		font-size: 16px;
+	}
+
+	.lista-provedor ul li i {
+		font-size: 16px;
+	}
+
+	.lista-provedor .h-d {
+		display: flex;
+		margin-bottom: 1rem;
+	}
+
+	.separador-p {
+		border-top: 2px dashed rgba(128, 128, 128, 0.288);
+		border-left: none;
+	}
+
+	.img-info img {
+		width: 80%;
+	}
+	.lista-provedor ul {
+		display: flex;
+		flex-direction: column;
+	}
+	.provedor-container {
+		display: flex;
+		flex-direction: row;
+	}
+	.imagen-boton {
+		width: 60%;
+	}
+	.planes-salud .planes {
+		flex-direction: row;
+	}
+	.planes-salud .planes a {
+		width: 30%;
+	}
+	.planes-salud .planes a:hover {
+		width: 33%;
 	}
 }
