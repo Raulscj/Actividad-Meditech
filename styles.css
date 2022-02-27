@@ -8,6 +8,7 @@
 }
 
 .container {
+	min-width: 375px;
 	display: grid;
 	width: 100%;
 	min-width: 360px;
@@ -127,7 +128,7 @@ nav ul li {
 
 nav ul li a {
 	color: blue;
-	font-size: 16px;
+	font-size: 14px;
 	padding: 7px 5px;
 }
 
@@ -850,9 +851,16 @@ li a:hover {
 			margin-left: -108%;
 		}
 	}
+	.footer {
+		font-size: 8px;
+	}
+	
+	.contacts a {
+		margin-left: 0.2rem;
+	}
 }
 
-/*Ajuste de 650px*/
+/*Ajuste de 805px*/
 @media (min-width: 805px) {
 	header {
 		height: 68rem;
@@ -919,8 +927,16 @@ li a:hover {
 		margin-top: 2rem;
 		width: 65px;
 	}
+	.footer {
+		font-size: 12px;
+	}
+	
+	.contacts a {
+		margin-left: 1rem;
+	}
 }
 
+/*Responsive Tablet Grande*/
 @media (min-width: 1024px) {
 	header {
 		height: 86rem;
@@ -1082,4 +1098,133 @@ li a:hover {
 	.planes-salud .planes a:hover {
 		width: 33%;
 	}
+	.footer {
+		align-items: center;
+		font-size: 14px;
+	}
+	
+	.contacts a {
+		margin-left: 1rem;
+	}
+}
+
+/*Responsive Laptop*/
+@media (min-width: 1280px) {
+	header {
+		height: 60rem;
+	}
+	@keyframes cambio {
+		0% {
+			margin-left: 0;
+		}
+		25% {
+			margin-left: -28%;
+		}
+		25% {
+			margin-left: -28%;
+		}
+		50% {
+			margin-left: -56%;
+		}
+		50% {
+			margin-left: -56%;
+		}
+		75% {
+			margin-left: -84%;
+		}
+		75% {
+			margin-left: -84%;
+		}
+		100% {
+			margin-left: -92%;
+		}
+	}
+
+	.lista-provedor p {
+		font-size: 14px;
+	}
+	.banner {
+		margin-top: 23rem;
+	}
+
+	.banner-content {
+		width: 60%;
+		margin-right: 25rem;
+	}
+
+	.banner h1 {
+		font-size: 50px;
+	}
+	.banner h2 {
+		margin-top: 0.5rem;
+		font-size: 40px;
+	}
+	.banner h3 {
+		margin-top: 1rem;
+		font-size: 35px;
+	}
+	svg {
+		margin-top: 1rem;
+		width: 50px;
+	}
+
+	.texto-info li p {
+		font-size: 20px;
+	}
+
+	.texto-info h2 {
+		margin-top: 2rem;
+		font-size: 35px;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.texto-info p {
+		text-align: justify;
+		font-size: 22px;
+		margin-bottom: 1rem;
+	}
+	.texto {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.texto .img-sec1 {
+		width: 35%;
+	}
+	
+	.texto .img-sec1 img {
+		display: block;
+		width: 100%;
+	}
+	
+	.texto .texto-sec1 {
+		width: 64%;
+	}
+	.informacion {
+		flex-direction: row;
+	}
+	.footer {
+		align-items: center;
+		font-size: 16px;
+	}
+	
+	.contacts a {
+		margin-left: 1rem;
+	}
+}
+
+/*Responsive para mi pantalla :)*/
+@media (min-width: 1366px) {
+	header {
+		height: 48rem;
+	}
+	.banner {
+		margin-top: 15rem;
+	}
+	svg {
+		margin-top: -1rem;
+		width: 50px;
+	}
+
 }
