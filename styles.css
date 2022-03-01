@@ -50,26 +50,11 @@ svg {
 
 header {
 	grid-area: header;
-	height: 51rem;
 	display: flex;
 	flex-direction: column;
-	background-image: url('img/banner.jpg');
-	background-size: cover;
-	background-position: center;
-}
-
-.back-1 {
-	background-image: url('img/banner.jpg');
-	background-size: cover;
-	background-position: center;
 	width: 100%;
-}
-
-.back-2 {
-	background-image: url('img/banner2.jpg');
-	background-size: cover;
-	background-position: center;
-	width: 100%;
+	position: relative;
+	overflow: hidden;
 }
 
 nav {
@@ -148,62 +133,89 @@ li a:hover {
 	display: none;
 }
 
+.slider-h {
+	display: flex;
+	width: 400%;
+	height: 54rem;
+	margin-left: -100%;
+}
+
+.slide1, .slide2, .slide3, .slide4 {
+	width: 100%;
+	display: block;
+}
+
+.slide1 {
+	background-image: url('img/banner.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.slide2 {
+	background-image: url('img/banner2.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.slide3 {
+	background-image: url('img/banner3.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.slide4 {
+	background-image: url('img/banner4.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
 .banner {
-	margin-top: 15rem;
+	margin-top: 18rem;
 	width: 100%;
 	text-align: center;
-	height: 15rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.slider-index {
-	margin-top: 1rem;
-	text-align: center;
-}
-
-.slider-index i {
-	padding: 0 15px;
-	font-size: 20px;
-	transition: 0.4s;
-}
-
-#index1 {
-	color: blue;
-}
-
-#index2 {
-	color: gray;
-}
-
 .banner-content {
-	width: 50%;
+	width: 100%;
 }
 
 .flecha1,
 .flecha2 {
-	background-color: rgba(128, 128, 128, 0.425);
-	padding: 40px 10px;
-	border-radius: 5px;
-	transition: 0.5s;
+	display: flex;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(0, 4, 255, 0.596);
+	top: 47%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50px;
+	transition: 0.8s;
+	cursor: pointer;
+}
+
+.flecha1 {
+	left: 10px;
+}
+
+.flecha2{
+	right: 10px;
 }
 
 .flecha1:hover,
 .flecha2:hover {
-	background-color: rgba(128, 128, 128, 0.671);
-}
-
-.flecha1 i,
-.flecha2 i {
-	font-size: 25px;
+	background-color: rgba(33, 17, 255, 0.993);
 }
 
 .banner h1 {
-	font-size: 30px;
+	font-size: 25px;
 }
 .banner h2 {
-	font-size: 25px;
+	font-size: 22px;
 	color: rgb(95, 93, 93);
 }
 .banner h3 {
@@ -213,7 +225,7 @@ li a:hover {
 	margin-bottom: 3rem;
 }
 .banner a {
-	font-size: 18px;
+	font-size: 17px;
 	border: 2px solid rgb(24, 147, 248);
 	padding: 18px 34px;
 	border-radius: 2px;
@@ -227,7 +239,7 @@ li a:hover {
 }
 
 .boton-animado {
-	margin-top: 8rem;
+	margin-top: 12rem;
 	text-align: center;
 }
 
@@ -818,6 +830,9 @@ li a:hover {
 			margin-left: -150%;
 		}
 	}
+	.flecha1, .flecha2 {
+		top: 40%;
+	}
 }
 
 /*Ajuste de 550px*/
@@ -859,9 +874,6 @@ li a:hover {
 
 /*Ajuste de 805px*/
 @media (min-width: 805px) {
-	header {
-		height: 68rem;
-	}
 	@keyframes cambio {
 		0% {
 			margin-left: 0;
@@ -887,6 +899,12 @@ li a:hover {
 		100% {
 			margin-left: -90%;
 		}
+	}
+	header {
+		height: 70rem;	
+	}
+	.slider-h {
+		height: 70rem;
 	}
 	.lista-provedor p {
 		font-size: 12px;
@@ -940,6 +958,12 @@ li a:hover {
 @media (min-width: 1024px) {
 	header {
 		height: 86rem;
+	}
+	.slider-h {
+		height: 86rem;
+	}
+	.boton-animado {
+		margin-top: 7rem;
 	}
 	@keyframes cambio {
 		0% {
