@@ -43,6 +43,28 @@ btnLeft.addEventListener('click', function () {
 	moveLeft();
 });
 
+const slider_servicio = document.querySelector('.slider-automatico-contenedor');
+
+let sliderItem_servicio = document.querySelectorAll('.item-r');
+let sliderItemUltimo_servicio = sliderItem_servicio[sliderItem_servicio.length - 1];
+
+slider_servicio.insertAdjacentElement('afterbegin', sliderItemUltimo_servicio);
+
+function moveRigth_service() {
+	let sliderPrimero_servicio = document.querySelectorAll('.item-r')[0];
+	slider_servicio.style.marginLeft = '-70%';
+	slider_servicio.style.transition = 'all 1.5s';
+	setTimeout(function () {
+		slider_servicio.style.transition = 'none';
+		slider_servicio.insertAdjacentElement('beforeend', sliderPrimero_servicio);
+		slider_servicio.style.marginLeft = '-40.5%';
+	}, 1500);
+}
+
+setInterval(function (){
+ 	moveRigth_service()
+ }, 2000)
+
 //Item a observar
 const imagen_info = document.getElementById('imagen-info');
 const imagen_link1 = document.getElementById('item-hide1');
