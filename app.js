@@ -4,22 +4,82 @@ window.addEventListener('scroll', function () {
 	nav.classList.toggle('sticky', window.scrollY > 0);
 });
 
+const slider = document.querySelector('.slider-h');
+let sliderItem = document.querySelectorAll('#item-slide');
+let sliderItemUltimo = sliderItem[sliderItem.length - 1];
+const btnLeft = document.querySelector('#flecha1');
+const btnRigth = document.querySelector('#flecha2');
+
+slider.insertAdjacentElement('afterbegin', sliderItemUltimo);
+
+function moveLeft() {
+	let sliderItem = document.querySelectorAll('#item-slide');
+	let sliderItemUltimo = sliderItem[sliderItem.length - 1];
+	slider.style.marginLeft = '0';
+	slider.style.transition = 'all 0.5s';
+	setTimeout(function () {
+		slider.style.transition = 'none';
+		slider.insertAdjacentElement('afterbegin', sliderItemUltimo);
+		slider.style.marginLeft = '-100%';
+	}, 500);
+}
+
+function moveRigth() {
+	let sliderPrimero = document.querySelectorAll('#item-slide')[0];
+	slider.style.marginLeft = '-200%';
+	slider.style.transition = 'all 0.5s';
+	setTimeout(function () {
+		slider.style.transition = 'none';
+		slider.insertAdjacentElement('beforeend', sliderPrimero);
+		slider.style.marginLeft = '-100%';
+	}, 500);
+}
+
+btnRigth.addEventListener('click', function () {
+	moveRigth();
+});
+
+btnLeft.addEventListener('click', function () {
+	moveLeft();
+});
+
+const slider_servicio = document.querySelector('.slider-automatico-contenedor');
+
+let sliderItem_servicio = document.querySelectorAll('.item-r');
+let sliderItemUltimo_servicio = sliderItem_servicio[sliderItem_servicio.length - 1];
+
+slider_servicio.insertAdjacentElement('afterbegin', sliderItemUltimo_servicio);
+
+function moveRigth_service() {
+	let sliderPrimero_servicio = document.querySelectorAll('.item-r')[0];
+	slider_servicio.style.marginLeft = '-70%';
+	slider_servicio.style.transition = 'all 1.5s';
+	setTimeout(function () {
+		slider_servicio.style.transition = 'none';
+		slider_servicio.insertAdjacentElement('beforeend', sliderPrimero_servicio);
+		slider_servicio.style.marginLeft = '-40.5%';
+	}, 1500);
+}
+
+setInterval(function (){
+ 	moveRigth_service()
+ }, 2000)
+
 //Item a observar
-const imagen_info = document.getElementById('imagen-info')
+const imagen_info = document.getElementById('imagen-info');
 const imagen_link1 = document.getElementById('item-hide1');
 const imagen_link2 = document.getElementById('item-hide2');
 const imagen_link3 = document.getElementById('item-hide3');
-const datos1 = document.getElementById('observar_li1')
-const datos2 = document.getElementById('observar_li2')
-const datos3 = document.getElementById('observar_li3')
-const datos4 = document.getElementById('observar_li4')
+const datos1 = document.getElementById('observar_li1');
+const datos2 = document.getElementById('observar_li2');
+const datos3 = document.getElementById('observar_li3');
+const datos4 = document.getElementById('observar_li4');
 
 //funcion del item-hide
 
 const cargaritem = (entradas, observador) => {
 	entradas.forEach((entrada) => {
 		if (entrada.isIntersecting) {
-
 			//efectos de entrada
 			entrada.target.classList.add('visible');
 
@@ -32,16 +92,16 @@ const cargaritem = (entradas, observador) => {
 			let cant1 = 0,
 				cant2 = 0,
 				cant3 = 0,
-				cant4 = 0 
+				cant4 = 0;
 
 			let tiempo1 = setInterval(() => {
-				contador1.textContent = Math.ceil(cant1 += 120);
+				contador1.textContent = Math.ceil((cant1 += 120));
 				if (cant1 === 14227) {
 					clearInterval(tiempo1);
 				}
 				if (cant1 > 14227) {
-					contador1.textContent = 14227
-					clearInterval(tiempo1)
+					contador1.textContent = 14227;
+					clearInterval(tiempo1);
 				}
 			}, 2);
 
@@ -75,14 +135,14 @@ const observador = new IntersectionObserver(cargaritem, {
 	threshold: 0.5,
 });
 
-observador.observe(imagen_info)
+observador.observe(imagen_info);
 observador.observe(imagen_link1);
 observador.observe(imagen_link2);
 observador.observe(imagen_link3);
-observador.observe(datos1)
-observador.observe(datos2)
-observador.observe(datos3)
-observador.observe(datos4)
+observador.observe(datos1);
+observador.observe(datos2);
+observador.observe(datos3);
+observador.observe(datos4);
 
 //animacion de numeros
 
@@ -156,48 +216,5 @@ $(document).ready(function () {
 	$('svg').click(function () {
 		var x = document.getElementById('slider');
 		x.scrollIntoView({ behavior: 'smooth', block: 'center' });
-	});
-	//flechas
-	$('#flecha1').click(function () {
-		$('#titulo-h').fadeOut();
-		$('#sub-h').fadeOut();
-		$('#text-h').fadeOut();
-		$('#boton-h').fadeOut(20);
-		$('header').removeClass('back-2');
-		$('header').addClass('back-1');
-		$('#index1').css({ color: 'blue' });
-		$('#index2').css({ color: 'gray' });
-		setTimeout(change, 600);
-		function change() {
-			$('#titulo-h').html('CENTRO DE ATENCION');
-			$('#sub-h').html('Medica Primaria y Odontológica');
-			$('#text-h').html('"Siempre Pensando en su Salud"');
-			$('#boton-h').html('Contáctanos');
-			$('#titulo-h').fadeIn();
-			$('#sub-h').fadeIn();
-			$('#text-h').fadeIn();
-			$('#boton-h').fadeIn();
-		}
-	});
-	$('#flecha2').click(function () {
-		$('#titulo-h').fadeOut();
-		$('#sub-h').fadeOut();
-		$('#text-h').fadeOut();
-		$('#boton-h').fadeOut(20);
-		$('header').removeClass('back-1');
-		$('header').addClass('back-2');
-		$('#index1').css({ color: 'gray' });
-		$('#index2').css({ color: 'blue' });
-		setTimeout(change, 600);
-		function change() {
-			$('#titulo-h').html('CUENTA CON NOSOTROS');
-			$('#sub-h').html('Afiliate a Nuestros Servicios');
-			$('#text-h').html('"Piensa en tu Bienestar"');
-			$('#boton-h').html('Afiliarse');
-			$('#titulo-h').fadeIn();
-			$('#sub-h').fadeIn();
-			$('#text-h').fadeIn();
-			$('#boton-h').fadeIn();
-		}
 	});
 });
